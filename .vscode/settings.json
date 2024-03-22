@@ -1,0 +1,15 @@
+{
+    "python.languageServer": "Pylance",
+    "editor.rulers": [
+        120,
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "flake8.args": [
+        "--max-line-length=120"
+    ],
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${workspaceFolder};${env:PYTHONPATH}"
+    }
+}

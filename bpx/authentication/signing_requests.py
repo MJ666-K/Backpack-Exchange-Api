@@ -6,10 +6,7 @@ import datetime
 from cryptography.hazmat.primitives.asymmetric import ed25519
 from tools.log import getLogger
 from configuration_env import get_api_key
-from tools.utils import Singleton
 
-
-@Singleton
 class SigningRequests:
 
     log = getLogger("system-" + datetime.datetime.now().strftime("%Y-%m-%d"))

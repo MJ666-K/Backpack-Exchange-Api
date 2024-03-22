@@ -1,12 +1,14 @@
 import requests
 from bpx.authentication.signing_requests import SigningRequests
+from tools.utils import Singleton
 
 
+@Singleton
 class Api(SigningRequests):
     def __init__(self, window: int = 5000) -> None:
         super().__init__(window)
 
-    def get(self, url: str, instruction: str, parameters: dict) -> tuple | False:
+    def get(self, url: str, instruction: str = "", parameters: dict = {}) -> tuple:
         headers = self.get_headers(instruction, parameters)
         response = requests.get(
             url,
@@ -19,7 +21,7 @@ class Api(SigningRequests):
         else:
             return False
 
-    def post(self, url: str, instruction: str, parameters: dict) -> tuple | False:
+    def post(self, url: str, instruction: str = "", parameters: dict = {}) -> tuple:
         headers = self.get_headers(instruction, parameters)
         response = requests.post(
             url,
@@ -36,7 +38,7 @@ class Api(SigningRequests):
         else:
             return False
 
-    def delete(self, url: str, instruction: str, parameters: dict) -> tuple | False:
+    def delete(self, url: str, instruction: str = "", parameters: dict = {}) -> tuple:
         headers = self.get_headers(instruction, parameters)
         response = requests.delete(
             url,

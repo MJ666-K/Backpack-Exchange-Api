@@ -12,6 +12,9 @@ class MarketsApi:
         self.url = f"{self.bp.url}api/v1/"
 
     def get_assets(self):
+        """
+        Retrieves all the assets that are supported by the exchange.
+        """
         response = self.bp.get(self.url + "assets")
         if response:
             msg, code = response
@@ -21,6 +24,9 @@ class MarketsApi:
             log.info(f"GetAssets Error...")
 
     def get_markets(self):
+        """
+        Retrieves all the markets that are supported by the exchange.
+        """
         response = self.bp.get(self.url + "markets")
         if response:
             msg, code = response
@@ -30,6 +36,9 @@ class MarketsApi:
             log.info(f"GetMarkets Error...")
 
     def get_ticker(self):
+        """
+        Retrieves summarised statistics for the last 24 hours for the given market symbol.
+        """
         response = self.bp.get(self.url + "ticker", parameters={"symbol": self.symbol})
         if response:
             msg, code = response
@@ -39,6 +48,9 @@ class MarketsApi:
             log.info(f"GetTicker Error...")
 
     def get_tickers(self):
+        """
+        Retrieves summarised statistics for the last 24 hours for all market symbols.
+        """
         response = self.bp.get(self.url + "tickers")
         if response:
             msg, code = response
@@ -48,6 +60,9 @@ class MarketsApi:
             log.info(f"GetTickers Error...")
 
     def get_depth(self):
+        """
+        Retrieves the order book depth for a given market symbol.
+        """
         response = self.bp.get(self.url + "depth", parameters={"symbol": self.symbol})
         if response:
             msg, code = response
@@ -57,6 +72,11 @@ class MarketsApi:
             log.info(f"GetDepth Error...")
 
     def get_klines(self, interval: str, startTime: int = None, endTime: int = None):
+        """
+        Get K-Lines for the given market symbol, optionally providing a startTime and endTime.
+        If no startTime is provided, the interval duration will be used.
+        If no endTime is provided, the current time will be used.
+        """
         parameters = {"symbol": self.symbol, "interval": interval}
         if not startTime:
             parameters["startTime"] = startTime

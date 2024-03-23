@@ -1,8 +1,8 @@
-# Backpack Exchange API(1.0)
+# Backpack Exchange API(1.0.0)
 
 ## ⚡ 简介
 # Backpack Exchange
-you can clone the repository and install the SDK manually:
+You can clone the repository and use it directly:
 
 ```bash
 git clone git@github.com:MJ666-K/Backpack-Exchange-Api.git

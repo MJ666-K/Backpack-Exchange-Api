@@ -1,5 +1,3 @@
-from setuptools import setup, find_packages
-
 name = "Backpack Exchange API(1.0.0)"
 version = "1.0.0"
 author = "MJ666-K"

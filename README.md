@@ -7,7 +7,7 @@ you can clone the repository and install the SDK manually:
 ```bash
 git clone git@github.com:MJ666-K/Backpack-Exchange-Api.git
 cd BackpackExchange
-pip3 install requirements.text
+pip3 install requirements.txt
 ```
 
 ## Usage

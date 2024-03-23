@@ -11,7 +11,7 @@ pip3 install requirements.txt
 ```
 
 ## Usage
-### config
+### config.ini
 ```python
 [keys]
 api_key=YOU-API-KEY

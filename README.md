@@ -6,7 +6,7 @@ You can clone the repository and use it directly:
 
 ```bash
 git clone git@github.com:MJ666-K/Backpack-Exchange-Api.git
-cd BackpackExchange
+cd Backpack-Exchange-Api
 pip3 install requirements.txt
 ```
 
@@ -14,8 +14,8 @@ pip3 install requirements.txt
 ### config.ini
 ```python
 [keys]
-api_key=YOUE-API-KEY
-api_secret=YOUE-SECRET
+api_key=YOUR-API-KEY
+api_secret=YOUR-SECRET
 ```
 ### main.py
 ```python

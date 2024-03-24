@@ -28,7 +28,7 @@ assets = markets.get_assets()
 print(assets)
 
 # Get ticker
-ticker = public_client.get_ticker()
+ticker = markets.get_ticker()
 print(ticker)
 
 ```

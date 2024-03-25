@@ -192,20 +192,10 @@ poetry.toml
 .history
 .ionide
 
-# End of https://www.toptal.com/developers/gitignore/api/python,visualstudiocode
-/execute_result
 /.idea
-
-script/csv_file/*.csv
 
 # ignore launch config for the vscode 
 .vscode/launch.json
 
 /*.dll
 logs
-
-output/
-
-env_pro.py
-
-tasks_library.zip
